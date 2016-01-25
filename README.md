@@ -12,7 +12,7 @@ $ git clone https://github.com/DNXSR/gettingStarted.git
 ```
 This will create a new directory where you have initially run the command. Then run:
 ```sh
-$ cd /gettingStarted
+$ cd gettingStarted
 $ chmod a+x easyROSinstall.sh
 $ ./easyROSinstall.sh
 ```
