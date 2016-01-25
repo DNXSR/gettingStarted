@@ -11,11 +11,13 @@ if [ $Yn = Y ]
 	read -p "Would you also like to install Sublime Text 2? This will help you by making any code easier to read. (Y/n)  " sublime
 	if [ $sublime = Y ]
 		then read -p "Would you also like to make it your default editor?" default
+		else echo ""
 	fi
 	clear
 	read -p "Would you also like to install Terminator? This will substitute the current terminal with a friendlier one that will let you have multiple tabs and terminals open on the same window. (Y/n)  " terminator
 	if [ $sublime = Y ]
-		sudo add-apt-repository ppa:webupd8team/sublime-text-2
+		then sudo add-apt-repository ppa:webupd8team/sublime-text-2
+		else echo ""
 	fi
 	clear
 	echo "Ok, now the install will begin. You might be asked your password one or more times in the process, as well as be asked to answer Yes or No to some questions, go get yourself some coffee or something, this might take a while."
@@ -31,10 +33,13 @@ if [ $Yn = Y ]
 		then sudo apt-get install sublime-text
 		if [ $default = Y ]
 			then sudo sed -i 's/gedit.desktop/sublime-text-2.desktop/g' /etc/gnome/defaults.list
+			else echo ""
 		fi
+		else echo ""
 	fi
 	if [ $terminator = Y ]
 		sudo apt-get install Terminator
+		else echo ""
 	fi
 	ws="catkin_ws"
 	clear
@@ -42,6 +47,7 @@ if [ $Yn = Y ]
 	read -p "ROS wiki uses the name catkin_ws as default for all the tutorials, I would recommend to keep it that way so you don't get confused in the learning process. Would you like to change this? (Y/n)  " Yn
 	if [ $Yn = Y ]
 		then read -p "How would you like to rename it?" ws
+		else echo ""
 	fi
 	cd
 	mkdir -p ~/$ws/src
