@@ -53,6 +53,8 @@ if [ $Yn = Y ]
 	mkdir -p ~/$ws/src
 	cd ~/$ws/src
 	catkin_init_workspace
+	cd ..
+	catkin_make
 	echo "source ~/$ws/devel/setup.bash" >> ~/.bashrc
 	clear
 	echo "The setup has finished! You must see now a new directory under your home folder named /$ws, this is were your ROS programs will need to be in order for catkin to find them. You are now ready to create your first ROS package!"
