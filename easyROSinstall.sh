@@ -38,7 +38,7 @@ if [ $Yn = Y ]
 		else echo ""
 	fi
 	if [ $terminator = Y ]
-		sudo apt-get install Terminator
+		then sudo apt-get install Terminator
 		else echo ""
 	fi
 	ws="catkin_ws"
