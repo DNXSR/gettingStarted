@@ -6,7 +6,9 @@ This script will also ask you if you would like to install two aditional tools w
 
 To run the script you just have to download the current package by running the following command in your terminal:
 
-```git clone https://github.com/DNXSR/gettingStarted.git```
+```
+git clone https://github.com/DNXSR/gettingStarted.git
+```
 
 This will create a new directory where you have initially run the command. The run:
 ```
